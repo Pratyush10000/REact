@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Book = ({ title, author, imgLink, price }) => {
-  console.log(title, author, imgLink, price);
+const Book = (props) => {
+  const (imgLink,author,title,price)=props;
   return (
     <div className='book'>
       <h2>{title}</h2>

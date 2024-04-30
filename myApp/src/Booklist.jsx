@@ -34,20 +34,18 @@ const BookData = [
   },
 ];
 
-const Booklist = () => {
+function BookList() {
   return (
-    <div className="booklist">
-      {BookData.map((book, index) => (
-        <Book
-          key={index}
-          title={book.title}
-          author={book.author}
-          imgLink={book.imgLink}
-          price={book.price}
-        />
-      ))}
-    </div>
+      <div className="booklist">
+          
+             <Book {...bookData[0]} />
+             <Book {...bookData[1]} />
+             <Book {...bookData[2]} />
+             <Book {...bookData[3]} />
+             <Book {...bookData[4]} />
+          
+      </div>
   );
-};
+}
 
 export default Booklist;
