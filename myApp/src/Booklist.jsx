@@ -36,16 +36,16 @@ const BookData = [
 
 function BookList() {
   return (
-      <div className="booklist">
-          
-             <Book {...bookData[0]} />
-             <Book {...bookData[1]} />
-             <Book {...bookData[2]} />
-             <Book {...bookData[3]} />
-             <Book {...bookData[4]} />
-          
-      </div>
+    <div className="booklist">
+      {BookData.map((b, index) => {
+        if (index === 0) {
+          return <Book key={index} {...b}/>;
+        } else {
+          return <Book key={index} {...b}/>;
+        }
+      })}
+    </div>
   );
 }
 
-export default Booklist;
+export default BookList;
