@@ -34,16 +34,12 @@ const BookData = [
   },
 ];
 
-function BookList() {
+const BookList = () => {
   return (
     <div className="booklist">
-      {BookData.map((b, index) => {
-        if (index === 0) {
-          return <Book key={index} {...b}/>;
-        } else {
-          return <Book key={index} {...b}/>;
-        }
-      })}
+      {BookData.map(b => (
+        <Book {...b} key={b.title} />
+      ))}
     </div>
   );
 }

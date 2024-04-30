@@ -1,34 +1,31 @@
-//rafce
-import React from 'react'
-
+import React from 'react';
 
 const Book = (props) => {
     console.log(props);
     return (
         <div className='book'>
-        <h2>{props.title}</h2>
-        <img src={props.imgLink} />
-        <h2>{props.author}</h2>
-        <h3>{props.price}</h3>
-            
+            <Title title={props.title} />
+            <Image imgLink={props.imgLink} />
+            <Author author={props.author} />
+            <Price price={props.price} />
         </div>
-    )
-}
+    );
+};
+
+const Title = (props) => {
+    return <h2>{props.title}</h2>;
+};
+
+const Image = (props) => {
+    return <img src={props.imgLink} alt="Book cover" />;
+};
+
+const Author = (props) => {
+    return <h2>{props.author}</h2>;
+};
+
+const Price = (props) => {
+    return <h3>{props.price}</h3>;
+};
 
 export default Book;
-
-function Title() {
-    return <h2>Dopamine Detox</h2>;
-}
-
-function Image() {
-    return <img src="https://m.media-amazon.com/images/I/71Q0U-8lxJS._AC_UY327_FMwebp_QL65_.jpg"></img>;
-}
-
-function Author() {
-    return <h4>Kerry J Donovan</h4>;
-}
-
-function Price() {
-    return <h5>Rs 99.99</h5>;
-}
